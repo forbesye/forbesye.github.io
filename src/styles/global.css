@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+html {
+  @apply bg-slate-800;
+}
+
+a {
+  text-decoration-line: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply flex;
+  @apply items-center;
+  @apply leading-tight;
+}
+
+h1 {
+  @apply font-bold;
+  @apply text-3xl;
+  @apply md:text-4xl;
+}
