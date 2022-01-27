@@ -27,9 +27,7 @@ const Post: React.FC<PostProps> = ({
         </div>
       </div>
 
-      {coverImage ? (
-        <GatsbyImage className="rounded-lg" image={image} alt="" />
-      ) : null}
+      {coverImage ? <GatsbyImage image={image} alt="" /> : null}
 
       <MDXRenderer>{body}</MDXRenderer>
     </div>

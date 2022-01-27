@@ -14,7 +14,6 @@ type HeaderProps = {
 
 type MainMenuProps = {
   mainMenu: MainMenuLink[];
-  // mainMenuItems: number;
   isMobileMenu: boolean;
 };
 
@@ -45,10 +44,12 @@ type PostProps = {
 };
 
 type PreviewProps = {
+  key: string;
   title: string;
   date: string;
   coverImage?: ImageDataLike;
   excerpt: string;
+  slug: string;
 };
 
 type IconProps = {
