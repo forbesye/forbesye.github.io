@@ -9,15 +9,15 @@ const tempMain = [
   },
   {
     title: "Appalachian Trail",
-    path: "/blog",
+    path: "/appalachian_trail",
   },
   {
     title: "Resume",
-    path: "/blog",
+    path: "/resume",
   },
   {
     title: "Impossible List",
-    path: "/blog",
+    path: "/impossible_list",
   },
 ];
 
@@ -38,11 +38,11 @@ const Header: React.FC<HeaderProps> = ({
       <header className="flex justify-between items-center relative p-5 bg-slate-900">
         <div className="flex items-center justify-between my-1 mx-auto max-w-full w-[768px]">
           <Link to="/" className="no-underline">
-            <div className="flex items-center font-bold text-2xl">
+            <div className="flex items-center font-bold font-mono text-2xl">
               <>
                 <span className="mr-1">{">"}</span>
                 <span>{logoText}</span>
-                <span className="inline-block w-2.5 h-5 bg-[#bf5700] ml-1 rounded-[1px] animate-cursor" />
+                <span className="inline-block w-2.5 h-6 bg-[#bf5700] ml-1 rounded-[1px] animate-cursor" />
               </>
             </div>
           </Link>

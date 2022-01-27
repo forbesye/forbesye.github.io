@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { MDXRenderer } from "gatsby-plugin-mdx";
+import { PostProps } from "../types/main";
 
 const Post: React.FC<PostProps> = ({
   title,
@@ -18,7 +19,7 @@ const Post: React.FC<PostProps> = ({
     <div className="w-full max-w-[660px] md:max-w-[800px] text-left p-5 my-0 mx-auto">
       <div>
         <h1 className="mt-0 mx-0 mb-2.5">{title}</h1>
-        <div>{`Posted on ${date}`}</div>
+        <div>{`Created on ${date}`}</div>
         <div>
           {updatedDate && updatedDate !== date
             ? `Last updated on ${updatedDate}`
