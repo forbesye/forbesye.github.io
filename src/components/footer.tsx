@@ -11,7 +11,8 @@ const Footer: React.FC = () => {
         <a href="https://github.com/forbesye">GitHub</a>
       </span>
       <span className="m-0 p-0 border-0 md:ml-5 md:pl-5 md:border-l">
-        Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+        Built with <a href="https://www.gatsbyjs.org">Gatsby</a> and{" "}
+        <a href="https://tailwindcss.com/">Tailwind</a>
       </span>
     </footer>
   );
