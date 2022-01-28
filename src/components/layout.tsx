@@ -49,7 +49,7 @@ const Layout: React.FC<Props> = ({ pageTitle, children }) => {
       <title>
         {pageTitle} | {data.site.siteMetadata.title}
       </title>
-      <main className="flex flex-col flex-[1 0 auto] items-center justify-center my-12 mx-auto w-full max-w-[800px]">
+      <main className="flex flex-col flex-[1 0 auto] items-center justify-center my-12 mx-auto w-full max-w-[900px]">
         {children}
       </main>
       <Footer />

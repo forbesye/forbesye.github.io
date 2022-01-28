@@ -36,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({
   return (
     <>
       <header className="flex justify-between items-center relative p-5 bg-slate-900">
-        <div className="flex items-center justify-between my-1 mx-auto max-w-full w-[768px]">
+        <div className="flex items-center justify-between my-1 mx-auto max-w-full w-[900px]">
           <Link to="/" className="no-underline">
             <div className="flex items-center font-bold font-mono text-2xl">
               <>

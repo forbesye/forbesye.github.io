@@ -52,6 +52,11 @@ type PreviewProps = {
   slug: string;
 };
 
+type PaginationProps = {
+  currentPage: number;
+  numPages: number;
+};
+
 type IconProps = {
   d: string;
   size: number;
