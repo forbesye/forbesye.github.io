@@ -1,7 +1,27 @@
 const path = require(`path`);
+const { execSync } = require("child_process");
 
 exports.onPostBuild = ({ reporter }) => {
   reporter.info(`Your Gatsby site has been built!`);
+};
+
+exports.onCreateNode = ({ node, actions }) => {
+  if (node.internal.type === "Mdx") {
+    const lastUpdatedISOString = execSync(
+      `git log -1 --pretty=format:%aI ${node.fileAbsolutePath}`
+    ).toString();
+    const lastUpdated = new Date(lastUpdatedISOString);
+
+    actions.createNodeField({
+      node,
+      name: "lastUpdated",
+      value: lastUpdated.toLocaleDateString("en", {
+        month: "long",
+        day: "numeric",
+        year: "numeric",
+      }),
+    });
+  }
 };
 
 exports.createPages = async ({ graphql, actions }) => {
@@ -19,7 +39,9 @@ exports.createPages = async ({ graphql, actions }) => {
         edges {
           node {
             id
-            fileAbsolutePath
+            fields {
+              lastUpdated
+            }
             frontmatter {
               date(formatString: "MMMM DD, YYYY")
               title
@@ -51,6 +73,9 @@ exports.createPages = async ({ graphql, actions }) => {
         edges {
           node {
             id
+            fields {
+              lastUpdated
+            }
             frontmatter {
               date(formatString: "MMMM DD, YYYY")
               title

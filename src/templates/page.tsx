@@ -8,11 +8,12 @@ const PageTemplate = ({ pageContext }) => {
   const {
     body,
     frontmatter: { date, title },
+    fields: { lastUpdated },
   } = pageContext.data;
 
   return (
     <Layout pageTitle={title}>
-      <Post title={title} date={date} body={body} />
+      <Post title={title} date={date} body={body} updatedDate={lastUpdated} />
     </Layout>
   );
 };

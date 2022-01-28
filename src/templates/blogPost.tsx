@@ -4,7 +4,7 @@ import React from "react";
 import Layout from "../components/layout";
 import Post from "../components/post";
 
-const BlogNavigation = ({ prevSlug, prevTitle, nextSlug, nextTitle }) => {
+const BlogNavigation = ({ prevSlug, nextSlug }) => {
   return (
     <div className="flex items-center justify-center w-full mt-4">
       {prevSlug ? (
@@ -33,23 +33,17 @@ const BlogTemplate = (props) => {
     node: {
       body,
       frontmatter: { date, title },
+      fields: { lastUpdated },
     },
     next,
     previous,
   } = props.pageContext.data;
 
-  console.log(next, previous);
-
   return (
     <Layout pageTitle={title}>
       <>
-        <Post title={title} date={date} body={body} />
-        <BlogNavigation
-          prevSlug={previous?.slug}
-          prevTitle={previous?.frontmatter?.title}
-          nextSlug={next?.slug}
-          nextTitle={next?.frontmatter?.title}
-        />
+        <Post title={title} date={date} body={body} updatedDate={lastUpdated} />
+        <BlogNavigation prevSlug={previous?.slug} nextSlug={next?.slug} />
       </>
     </Layout>
   );
