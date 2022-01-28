@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./header";
 import Footer from "./footer";
 import { useStaticQuery, graphql } from "gatsby";
+import SEO from "./seo";
 
 type Props = {
   pageTitle: string;
@@ -31,6 +32,7 @@ const Layout: React.FC<Props> = ({ pageTitle, children }) => {
 
   return (
     <div className="text-white text-lg flex flex-col justify-center text-center">
+      <SEO title={pageTitle} />
       <Header
         logoText={logoText}
         mainMenu={mainMenu}
