@@ -2,8 +2,9 @@ module.exports = {
   siteMetadata: {
     title: "Jefferson Ye",
     description: "Jefferson Ye's personal website",
-    siteUrl: "https://www.jeffersonye.com",
+    url: "https://www.jeffersonye.com",
     logoText: "Jefferson Ye",
+    image: "/JeffersonYeHeadshot.png",
     numMenuItems: 5,
     menuMoreText: "More",
     mainMenu: [
