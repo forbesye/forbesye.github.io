@@ -73,7 +73,7 @@ const BlogList: React.FC = (props) => {
   } = props;
 
   return (
-    <Layout pageTitle="My Blog Posts">
+    <Layout pageTitle="Blog">
       <div>
         {data.allMdx.edges.map((edge) => (
           <BlogCard

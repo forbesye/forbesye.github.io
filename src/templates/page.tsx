@@ -4,7 +4,6 @@ import Layout from "../components/layout";
 import Post from "../components/post";
 
 const PageTemplate = ({ pageContext }) => {
-  console.log(pageContext);
   const {
     body,
     frontmatter: { date, title },
