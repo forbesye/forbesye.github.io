@@ -4,7 +4,6 @@ module.exports = {
     description: "Jefferson Ye's personal website",
     siteUrl: "https://www.jeffersonye.com",
     logoText: "Jefferson Ye",
-    postsPerPage: 5,
     numMenuItems: 5,
     menuMoreText: "More",
     mainMenu: [

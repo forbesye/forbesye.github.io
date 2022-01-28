@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { PostProps } from "../types/main";
@@ -10,8 +9,6 @@ const Post: React.FC<PostProps> = ({
   updatedDate,
   coverImage,
   body,
-  // previousPost,
-  // nextPost,
 }) => {
   const image = getImage(coverImage);
 

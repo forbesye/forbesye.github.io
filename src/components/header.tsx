@@ -2,25 +2,6 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 import Menu from "./menu";
 
-const tempMain = [
-  {
-    title: "Blog",
-    path: "/blog",
-  },
-  {
-    title: "Appalachian Trail",
-    path: "/appalachian_trail",
-  },
-  {
-    title: "Resume",
-    path: "/resume",
-  },
-  {
-    title: "Impossible List",
-    path: "/impossible_list",
-  },
-];
-
 const Header: React.FC<HeaderProps> = ({
   logoText,
   mainMenu,
@@ -48,9 +29,9 @@ const Header: React.FC<HeaderProps> = ({
           </Link>
           <span className="flex relative">
             <Menu
-              mainMenu={tempMain}
-              mainMenuItems={5}
-              menuMoreText="More"
+              mainMenu={mainMenu}
+              mainMenuItems={numMenuItems}
+              menuMoreText={menuMoreText}
               isMobileMenuVis={mobileMenuVisible}
               isSubMenuVis={subMenuVisible}
               onToggleMobileMenu={onToggleMobileMenu}
