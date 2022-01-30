@@ -1,4 +1,5 @@
 import { ImageDataLike } from "gatsby-plugin-image";
+import React from "react";
 
 type MainMenuLink = {
   title: string;
@@ -39,8 +40,6 @@ type PostProps = {
   updatedDate?: string;
   coverImage?: ImageDataLike;
   body: string;
-  // previousPost: object;
-  // nextPost: object;
 };
 
 type PreviewProps = {
@@ -62,4 +61,16 @@ type IconProps = {
   size: number;
   label?: string;
   className?: string;
+};
+
+type MapProps = {
+  children?: React.ReactNode;
+};
+
+type MapMarkerProps = {
+  longitude: number;
+  latitude: number;
+  label: string;
+  link: string;
+  title: string;
 };

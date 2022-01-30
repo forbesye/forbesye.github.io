@@ -8,10 +8,11 @@ import {
   ZoomableGroup,
   Line,
   Marker,
-  Annotation,
 } from "react-simple-maps";
+import { MapProps } from "../types/main";
 
-const MapChart: React.FC = () => {
+const MapChart: React.FC<MapProps> = (props) => {
+  const { children } = props;
   const [zoom, setZoom] = useState<number>(2);
 
   return (
@@ -57,6 +58,7 @@ const MapChart: React.FC = () => {
               return null;
             })}
           </>
+          {children}
         </ZoomableGroup>
       </ComposableMap>
       <div className="absolute bottom-6 right-6">
