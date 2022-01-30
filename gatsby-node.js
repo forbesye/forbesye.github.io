@@ -16,6 +16,7 @@ exports.onCreateNode = ({ node, actions }) => {
       node,
       name: "lastUpdated",
       value: lastUpdated.toLocaleDateString("en", {
+        timeZone: "America/New_York",
         month: "long",
         day: "numeric",
         year: "numeric",
