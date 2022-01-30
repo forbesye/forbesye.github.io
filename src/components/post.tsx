@@ -11,6 +11,7 @@ const Post: React.FC<PostProps> = ({
   body,
 }) => {
   const image = getImage(coverImage);
+  console.log(image);
 
   return (
     <div className="w-full max-w-[660px] md:max-w-[900px] text-left p-5 my-0 mx-auto prose prose-invert">

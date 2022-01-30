@@ -28,11 +28,16 @@ const BlogNavigation = ({ prevSlug, nextSlug }) => {
 };
 
 const BlogTemplate = (props) => {
-  console.log(props);
   const {
     node: {
       body,
-      frontmatter: { date, title },
+      frontmatter: {
+        date,
+        title,
+        hero_image: {
+          childImageSharp: { gatsbyImageData },
+        },
+      },
       fields: { lastUpdated },
     },
     next,
@@ -42,7 +47,13 @@ const BlogTemplate = (props) => {
   return (
     <Layout pageTitle={title}>
       <>
-        <Post title={title} date={date} body={body} updatedDate={lastUpdated} />
+        <Post
+          title={title}
+          date={date}
+          body={body}
+          updatedDate={lastUpdated}
+          coverImage={gatsbyImageData}
+        />
         <BlogNavigation prevSlug={previous?.slug} nextSlug={next?.slug} />
       </>
     </Layout>
