@@ -15,6 +15,10 @@ input[type="reset"] {
 }
 
 html {
+  @apply bg-slate-900;
+}
+
+body {
   @apply bg-slate-800;
 }
 
