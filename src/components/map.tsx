@@ -20,7 +20,7 @@ const MapChart: React.FC = () => {
         <ZoomableGroup
           zoom={zoom}
           center={[-77.2, 40.7]}
-          minZoom={1}
+          minZoom={2}
           maxZoom={30}
         >
           <>
@@ -69,7 +69,7 @@ const MapChart: React.FC = () => {
           </button>
           <button
             className="bg-white py-2 px-4 text-slate-900 rounded-full drop-shadow-xl"
-            onClick={() => setZoom(Math.max(zoom - 1, 1))}
+            onClick={() => setZoom(Math.max(zoom - 1, 2))}
           >
             -
           </button>
