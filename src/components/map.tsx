@@ -11,7 +11,7 @@ import {
   Annotation,
 } from "react-simple-maps";
 
-const MapChart = () => {
+const MapChart: React.FC = () => {
   const [zoom, setZoom] = useState<number>(2);
 
   return (
