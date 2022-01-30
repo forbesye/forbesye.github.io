@@ -7,15 +7,11 @@ const MapMarker: React.FC<MapMarkerProps> = (props) => {
   const { longitude, latitude, label, link, title } = props;
   console.log(props);
   return (
-    // <Link to={link}>
-    <Marker
-      key={link}
-      className="bg-white p-5"
-      coordinates={[longitude, latitude]}
-    >
-      {label}
-    </Marker>
-    // </Link>
+    <Link className="no-underline" to={link}>
+      <Marker key={link} coordinates={[longitude, latitude]}>
+        <circle r={0.8} fill="#F00" stroke="#fff" strokeWidth={0.2} />
+      </Marker>
+    </Link>
   );
 };
 

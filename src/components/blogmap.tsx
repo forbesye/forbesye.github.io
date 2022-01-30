@@ -26,18 +26,6 @@ const BlogMap: React.FC = () => {
 
   const posts = data.allMdx.edges;
 
-  return null;
-
-  // return (
-  //   <MapMarker
-  //     longitude={-84.1939}
-  //     latitude={34.6272}
-  //     label="0"
-  //     title="hello"
-  //     link={`/blog/post-1`}
-  //   />
-  // );
-
   return (
     <Map>
       {posts.map((edge) => {
