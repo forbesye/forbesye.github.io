@@ -42,7 +42,7 @@ const Layout: React.FC<Props> = ({ pageTitle, children }) => {
       <title>
         {pageTitle} | {title}
       </title>
-      <main className="flex flex-col flex-[1 0 auto] items-center justify-center my-2 md:my-12 mx-auto w-full max-w-[900px]">
+      <main className="flex flex-col flex-[1 0 auto] items-center justify-center my-2 md:my-8 mx-auto w-full max-w-[900px]">
         {children}
       </main>
       <Footer />

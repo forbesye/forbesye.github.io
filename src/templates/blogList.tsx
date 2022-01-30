@@ -17,7 +17,7 @@ const BlogCard: React.FC<PreviewProps> = ({
     <article className="flex m-5 mb-0 mt-6 first:mt-0 border-b pb-8">
       <Link className="no-underline" to={`/blog/${slug}`}>
         <div className="md:flex md:flex-row md:justify-between mb-4 md:mb-6 ">
-          <h2 className="text-3xl md:text-4xl font-extrabold md:text-left md:basis-3/4">
+          <h2 className="text-4xl font-extrabold md:text-left md:basis-3/4">
             {title}
           </h2>
           <p className="mt-2 italic md:basis-1/4 md:text-right">{date}</p>
@@ -73,8 +73,8 @@ const BlogList: React.FC = (props) => {
   } = props;
 
   return (
-    <Layout pageTitle="Blog">
-      <div>
+    <Layout pageTitle="Blog Posts">
+      <div className="mt-5">
         {data.allMdx.edges.map((edge) => (
           <BlogCard
             key={edge.node.id}
