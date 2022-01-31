@@ -1,26 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import USMap from "../assets/states-10m.json";
-import AT from "../assets/at.json";
+import AT from "../assets/at_10percent.json";
 import {
   ComposableMap,
   Geographies,
   Geography,
   ZoomableGroup,
   Line,
-  Marker,
 } from "react-simple-maps";
 import { MapProps } from "../types/main";
 
-const MapChart: React.FC<MapProps> = (props) => {
-  const { children } = props;
-  const [zoom, setZoom] = useState<number>(2);
+const MapChart: React.FC<MapProps> = ({
+  children,
+  tooltip,
+  latitude = 40.7,
+  longitude = -77.2,
+  zoom: initZoom = 2,
+}) => {
+  const [zoom, setZoom] = useState<number>(initZoom);
 
   return (
-    <div className="my-4 border-4 border-white relative">
-      <ComposableMap projection="geoAlbers">
+    <>
+      <ComposableMap projection="geoAlbers" data-tip="">
         <ZoomableGroup
           zoom={zoom}
-          center={[-77.2, 40.7]}
+          center={[longitude, latitude]}
           minZoom={2}
           maxZoom={30}
         >
@@ -61,6 +65,7 @@ const MapChart: React.FC<MapProps> = (props) => {
           {children}
         </ZoomableGroup>
       </ComposableMap>
+      {tooltip}
       <div className="absolute bottom-6 right-6">
         <div className="flex flex-col">
           <button
@@ -77,8 +82,8 @@ const MapChart: React.FC<MapProps> = (props) => {
           </button>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
-export default MapChart;
+export default memo(MapChart);

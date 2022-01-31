@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Map from "./map";
 import MapMarker from "./mapMarker";
-import { Marker } from "react-simple-maps";
+import ReactTooltip from "react-tooltip";
 import { useStaticQuery, graphql } from "gatsby";
 
 const BlogMap: React.FC = () => {
@@ -14,7 +14,6 @@ const BlogMap: React.FC = () => {
             frontmatter {
               longitude
               latitude
-              day
               title
             }
             slug
@@ -24,28 +23,36 @@ const BlogMap: React.FC = () => {
     }
   `);
 
-  const posts = data.allMdx.edges;
+  const posts = data.allMdx.edges.filter((edge) => {
+    const {
+      frontmatter: { longitude, latitude },
+    } = edge.node;
+    return longitude && latitude;
+  });
+  const [hoverText, setHoverText] = useState<string>("");
+  const tooltip = <ReactTooltip>{hoverText}</ReactTooltip>;
 
   return (
-    <Map>
-      {posts.map((edge) => {
-        console.log(edge);
-        const {
-          frontmatter: { longitude, latitude, day, title },
-          slug,
-        } = edge.node;
+    <div className="my-4 border-4 border-white relative">
+      <Map tooltip={tooltip}>
+        {posts.map((edge) => {
+          const {
+            frontmatter: { longitude, latitude, title },
+            slug,
+          } = edge.node;
 
-        return (
-          <MapMarker
-            longitude={longitude}
-            latitude={latitude}
-            label={day}
-            title={title}
-            link={`/blog/${slug}`}
-          />
-        );
-      })}
-    </Map>
+          return (
+            <MapMarker
+              longitude={longitude}
+              latitude={latitude}
+              title={title}
+              link={`/blog/${slug}`}
+              setHoverText={setHoverText}
+            />
+          );
+        })}
+      </Map>
+    </div>
   );
 };
 

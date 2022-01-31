@@ -65,12 +65,16 @@ type IconProps = {
 
 type MapProps = {
   children?: React.ReactNode;
+  tooltip?: React.ReactNode;
+  latitude?: number;
+  longitude?: number;
+  zoom?: number;
 };
 
 type MapMarkerProps = {
   longitude: number;
   latitude: number;
-  label: string;
   link: string;
   title: string;
+  setHoverText: (text: string) => void;
 };

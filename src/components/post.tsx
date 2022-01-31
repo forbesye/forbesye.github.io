@@ -2,6 +2,7 @@ import React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { PostProps } from "../types/main";
+import BlogMap from "../components/blogMap";
 
 const Post: React.FC<PostProps> = ({
   title,
@@ -11,7 +12,6 @@ const Post: React.FC<PostProps> = ({
   body,
 }) => {
   const image = getImage(coverImage);
-  console.log(image);
 
   return (
     <div className="w-full max-w-[660px] md:max-w-[900px] text-left p-5 my-0 mx-auto prose prose-invert">
