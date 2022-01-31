@@ -1,4 +1,4 @@
-# Jefferson Ye's personal site
+# [jeffersonye.com](jeffersonye.com)
 
 This site was built with:
 
