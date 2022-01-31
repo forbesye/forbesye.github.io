@@ -2,7 +2,6 @@ import React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { PostProps } from "../types/main";
-import BlogMap from "../components/blogMap";
 
 const Post: React.FC<PostProps> = ({
   title,
