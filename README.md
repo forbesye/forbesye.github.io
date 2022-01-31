@@ -1,4 +1,4 @@
-# [jeffersonye.com](jeffersonye.com)
+# [jeffersonye.com](https://jeffersonye.com/)
 
 This site was built with:
 
