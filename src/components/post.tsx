@@ -11,6 +11,7 @@ const Post: React.FC<PostProps> = ({
   body,
 }) => {
   const image = getImage(coverImage);
+  const lastUpdated = updatedDate !== "Invalid Date" ? updatedDate : null;
 
   return (
     <div className="w-full max-w-[660px] md:max-w-[900px] text-left p-5 my-0 mx-auto prose prose-invert">
@@ -18,9 +19,7 @@ const Post: React.FC<PostProps> = ({
         <h1 className="mt-0 mx-0 mb-2.5 text-white">{title}</h1>
         <div className="italic">{`Posted on ${date}`}</div>
         <div className="italic">
-          {updatedDate && updatedDate !== date
-            ? `Last updated on ${updatedDate}`
-            : null}
+          {lastUpdated ? `Last updated on ${updatedDate}` : null}
         </div>
       </div>
 
