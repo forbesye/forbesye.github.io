@@ -44,7 +44,7 @@ exports.createPages = async ({ graphql, actions }) => {
               lastUpdated
             }
             frontmatter {
-              date(formatString: "MMMM DD, YYYY")
+              date(formatString: "MMMM D, YYYY")
               title
               path
             }
@@ -78,7 +78,7 @@ exports.createPages = async ({ graphql, actions }) => {
               lastUpdated
             }
             frontmatter {
-              date(formatString: "MMMM DD, YYYY")
+              date(formatString: "MMMM D, YYYY")
               title
               hero_image {
                 childImageSharp {
