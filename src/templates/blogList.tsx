@@ -1,7 +1,7 @@
 import * as React from "react";
 import Layout from "../components/layout";
 import { Link, graphql } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import { PreviewProps, PaginationProps } from "../types/main";
 
 const BlogCard: React.FC<PreviewProps> = ({
@@ -20,16 +20,24 @@ const BlogCard: React.FC<PreviewProps> = ({
           <h2 className="text-4xl font-extrabold md:text-left md:basis-3/4">
             {title}
           </h2>
-          <p className="mt-2 italic md:basis-1/4 md:text-right">{date}</p>
+          <p className="mt-2 italic md:basis-1/4 md:text-right text-[#cbcfd6]">
+            {date}
+          </p>
         </div>
         <div className="md:flex md:flex-row">
           <div className="md:basis-1/2">
             {coverImage ? (
-              <GatsbyImage className="aspect-[4/3]" image={image} alt="" />
-            ) : null}
+              <GatsbyImage className="aspect-[4/3]" image={image} alt={title} />
+            ) : (
+              <StaticImage
+                className="aspect-[4/3] bg-slate-200 rounded-2xl"
+                src="../assets/placeholder.png"
+                alt="placeholder"
+              />
+            )}
           </div>
           <div className="mt-4 md:mt-0 md:basis-1/2 md:flex md:flex-col md:pl-8 md:justify-between">
-            <p className="md:grow md:text-left">{excerpt}</p>
+            <p className="md:grow md:text-left text-[#cbcfd6]">{excerpt}</p>
             <div className="mt-4 bg-white hover:bg-slate-300 inline-block mx-auto text-slate-900 px-3 py-1 rounded-lg">
               Read more →
             </div>
@@ -105,7 +113,7 @@ export const query = graphql`
           fileAbsolutePath
           slug
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MMMM D, YYYY")
             title
             path
             hero_image {
