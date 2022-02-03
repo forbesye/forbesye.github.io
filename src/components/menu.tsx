@@ -78,7 +78,7 @@ const Menu: React.FC<MenuProps> = ({
             </>
           ) : null}
           <button
-            className="mr-2.5 p-0 leading-[0] bg-none text-inherit border-0"
+            className="p-0 leading-[0] bg-none text-inherit border-0"
             onClick={onToggleMobileMenu}
             type="button"
             aria-label="Menu"
@@ -88,7 +88,7 @@ const Menu: React.FC<MenuProps> = ({
         </>
       </div>
       <div className="hidden md:block">
-        <ul className="flex flex-[0 0 auto] items-center justify-start max-w-full my-0 mx-auto py-0 px-4 list-none">
+        <ul className="flex flex-[0 0 auto] items-center justify-center max-w-full my-0 mx-auto py-0 list-none">
           <MainMenu mainMenu={mainMenu} isMobileMenu={false} />
           {/* {isSubMenu ? (
             <>
