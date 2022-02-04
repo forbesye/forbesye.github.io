@@ -16,11 +16,11 @@ const BlogCard: React.FC<PreviewProps> = ({
   return (
     <article className="flex m-5 mb-0 mt-6 first:mt-0 border-b pb-8">
       <Link className="no-underline" to={`/blog/${slug}`}>
-        <div className="md:flex md:flex-row md:justify-between mb-4 md:mb-6 ">
-          <h2 className="text-4xl font-extrabold md:text-left md:basis-3/4">
+        <div className="md:flex md:flex-row md:justify-between mb-4 md:mb-6 md:items-center">
+          <h2 className="text-5xl font-extrabold md:text-left md:basis-3/4">
             {title}
           </h2>
-          <p className="mt-2 italic md:basis-1/4 md:text-right text-[#cbcfd6]">
+          <p className="text-xl mt-2 italic md:basis-1/4 md:text-right text-[#cbcfd6]">
             {date}
           </p>
         </div>
@@ -37,8 +37,10 @@ const BlogCard: React.FC<PreviewProps> = ({
             )}
           </div>
           <div className="mt-4 md:mt-0 md:basis-1/2 md:flex md:flex-col md:pl-8 md:justify-between">
-            <p className="md:grow md:text-left text-[#cbcfd6]">{excerpt}</p>
-            <div className="mt-4 bg-white hover:bg-slate-300 inline-block mx-auto text-slate-900 px-3 py-1 rounded-lg">
+            <p className="text-xl md:grow md:text-left text-[#cbcfd6]">
+              {excerpt}
+            </p>
+            <div className="text-xl mt-4 bg-white hover:bg-slate-300 inline-block mx-auto text-slate-900 px-3 py-1 rounded-lg">
               Read more →
             </div>
           </div>
