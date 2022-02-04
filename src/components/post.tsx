@@ -16,7 +16,7 @@ const Post: React.FC<PostProps> = ({
   return (
     <div className="w-full max-w-[660px] md:max-w-[900px] text-left p-5 my-0 mx-auto prose prose-invert prose-xl">
       <div className="mb-4">
-        <h1 className="">{title}</h1>
+        <h1 className="mb-6"> {title}</h1>
         <div className="italic">{`Created on ${date}`}</div>
         <div className="italic">
           {lastUpdated ? `Last updated on ${updatedDate}` : null}

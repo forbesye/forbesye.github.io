@@ -37,7 +37,7 @@ const BlogCard: React.FC<PreviewProps> = ({
             )}
           </div>
           <div className="mt-4 md:mt-0 md:basis-1/2 md:flex md:flex-col md:pl-8 md:justify-between">
-            <p className="text-xl md:grow md:text-left text-[#cbcfd6]">
+            <p className="text-xl leading-8 md:grow md:text-left text-[#cbcfd6]">
               {excerpt}
             </p>
             <div className="text-xl mt-4 bg-white hover:bg-slate-300 inline-block mx-auto text-slate-900 px-3 py-1 rounded-lg">
