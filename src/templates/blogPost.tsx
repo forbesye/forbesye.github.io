@@ -9,7 +9,7 @@ const BlogNavigation = ({ prevSlug, nextSlug }) => {
     <div className="flex items-center justify-center w-full mt-4">
       {prevSlug ? (
         <Link
-          className="first:mr-8 inline-block bg-white hover:bg-slate-300 text-slate-900 px-4 py-1 no-underline rounded"
+          className="first:mr-8 only:m-0 inline-block bg-white hover:bg-burnt hover:text-white text-slate-900 px-4 py-1 no-underline rounded"
           to={`/blog/${prevSlug}`}
         >
           ← Newer Post
@@ -17,7 +17,7 @@ const BlogNavigation = ({ prevSlug, nextSlug }) => {
       ) : null}
       {nextSlug ? (
         <Link
-          className=" inline-block bg-white hover:bg-slate-300 text-slate-900 px-4 py-1 no-underline rounded"
+          className="inline-block bg-white hover:bg-burnt hover:text-white text-slate-900 px-4 py-1 no-underline rounded"
           to={`/blog/${nextSlug}`}
         >
           Older Post →

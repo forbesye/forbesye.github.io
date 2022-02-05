@@ -19,11 +19,12 @@ html {
 }
 
 body {
-  @apply min-h-screen bg-slate-800;
+  @apply min-h-screen bg-slate-800 selection:bg-burnt selection:text-white;
 }
 
 a {
   text-decoration-line: underline;
+  @apply transition duration-100 hover:text-burnt;
 }
 
 img {

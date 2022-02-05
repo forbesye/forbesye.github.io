@@ -24,6 +24,9 @@ module.exports = {
           "50%": { opacity: "1" },
         },
       },
+      colors: {
+        burnt: "#bf5700",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
