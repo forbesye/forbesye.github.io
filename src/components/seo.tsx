@@ -25,7 +25,13 @@ const SEO = (props) => {
   };
 
   return (
-    <Helmet title={seo.title} titleTemplate={titleTemplate}>
+    <Helmet
+      title={seo.title}
+      titleTemplate={titleTemplate}
+      htmlAttributes={{
+        lang: "en",
+      }}
+    >
       <meta
         name="theme-color"
         content="#0F172A"
