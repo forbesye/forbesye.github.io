@@ -78,3 +78,7 @@ type MapMarkerProps = {
   title: string;
   setHoverText: (text: string) => void;
 };
+
+type CodeBlockProps = {
+  children: React.ReactNode;
+};

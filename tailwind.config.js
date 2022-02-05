@@ -27,6 +27,18 @@ module.exports = {
       colors: {
         burnt: "#bf5700",
       },
+      typography: () => {
+        return {
+          default: {
+            css: {
+              "code::before": false,
+              "code::after": false,
+              "blockquote p:first-of-type::before": false,
+              "blockquote p:last-of-type::after": false,
+            },
+          },
+        };
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],

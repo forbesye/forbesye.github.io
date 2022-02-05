@@ -1,6 +1,8 @@
 import React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
+import CodeBlock from "./codeBlock";
 import { PostProps } from "../types/main";
 
 const Post: React.FC<PostProps> = ({
@@ -12,6 +14,9 @@ const Post: React.FC<PostProps> = ({
 }) => {
   const image = getImage(coverImage);
   const lastUpdated = updatedDate !== "Invalid Date" ? updatedDate : null;
+  const components = {
+    pre: CodeBlock,
+  };
 
   return (
     <div className="w-full max-w-[660px] md:max-w-[900px] text-left p-5 my-0 mx-auto prose prose-invert prose-xl">
@@ -24,8 +29,9 @@ const Post: React.FC<PostProps> = ({
       </div>
 
       {coverImage ? <GatsbyImage image={image} alt="" /> : null}
-
-      <MDXRenderer>{body}</MDXRenderer>
+      <MDXProvider components={components}>
+        <MDXRenderer>{body}</MDXRenderer>
+      </MDXProvider>
     </div>
   );
 };
