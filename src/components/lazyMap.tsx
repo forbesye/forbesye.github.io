@@ -1,13 +1,12 @@
-import React, { lazy, Suspense } from "react";
+import React from "react";
+import loadable from "@loadable/component";
 
-const LazyMap: React.FC = lazy(() => import("./blogMap"));
-
-const renderLoader = () => <p>Loading...</p>;
+const LazyMap: React.FC = loadable(() => import("./blogMap"));
 
 const Wrapper: React.FC = () => (
-  <Suspense fallback={renderLoader()}>
+  <>
     <LazyMap />
-  </Suspense>
+  </>
 );
 
 export default Wrapper;
