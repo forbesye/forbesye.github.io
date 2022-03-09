@@ -30,3 +30,7 @@ a {
 img {
   @apply rounded-2xl;
 }
+
+figcaption {
+  @apply text-center text-sm;
+}
