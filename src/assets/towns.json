@@ -1,0 +1,79 @@
+{
+  "towns": [
+    {
+      "name": "Springer Mountain",
+      "coordinates": [-84.1939, 34.6272],
+      "offset": [-11, 0.5]
+    },
+    {
+      "name": "Fontana Dam",
+      "coordinates": [-83.8191, 35.4356],
+      "offset": [-8, 0.5]
+    },
+    {
+      "name": "Hot Springs",
+      "coordinates": [-82.829, 35.8923],
+      "offset": [7, 1]
+    },
+    {
+      "name": "Damascus",
+      "coordinates": [-81.7837, 36.6337],
+      "offset": [5, 3]
+    },
+    {
+      "name": "Daleville",
+      "coordinates": [-79.913, 37.4099],
+      "offset": [4, 3]
+    },
+    {
+      "name": "Waynesboro",
+      "coordinates": [-78.8895, 38.0685],
+      "offset": [-8, 0.5]
+    },
+    {
+      "name": "Harpers Ferry",
+      "coordinates": [-77.7389, 39.3254],
+      "offset": [-9, 0.5]
+    },
+    {
+      "name": "Boiling Springs",
+      "coordinates": [-77.1283, 40.1498],
+      "offset": [9, 0.5]
+    },
+    {
+      "name": "Delaware Water Gap",
+      "coordinates": [-74.9491, 41.1268],
+      "offset": [-12, 0.5]
+    },
+    {
+      "name": "Bear Mountain",
+      "coordinates": [-74.0063, 41.3129],
+      "offset": [-9, -2]
+    },
+    {
+      "name": "Dalton",
+      "coordinates": [-73.1662, 42.4737],
+      "offset": [-5, 0.5]
+    },
+    {
+      "name": "Hanover",
+      "coordinates": [-72.2896, 43.7022],
+      "offset": [4, 3]
+    },
+    {
+      "name": "Gorham",
+      "coordinates": [-71.1728, 44.388],
+      "offset": [6.5, 0.5]
+    },
+    {
+      "name": "Monson",
+      "coordinates": [-69.5012, 45.287],
+      "offset": [6, 0.5]
+    },
+    {
+      "name": "Mt. Katahdin",
+      "coordinates": [-68.9216, 45.9044],
+      "offset": [0, -3]
+    }
+  ]
+}
