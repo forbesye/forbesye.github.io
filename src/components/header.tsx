@@ -18,12 +18,12 @@ const Header: React.FC<HeaderProps> = ({
     <>
       <header className="flex justify-between items-center relative p-5 bg-slate-900">
         <div className="flex items-center justify-between my-1 mx-auto w-[900px] max-w-[900px] md:px-5">
-          <Link to="/" className="no-underline">
+          <Link to="/" className="no-underline hover:text-burnt">
             <div className="flex items-center font-bold font-mono text-2xl">
               <>
                 <span className="mr-1">{">"}</span>
                 <span>{logoText}</span>
-                <span className="inline-block w-2.5 h-6 bg-[#bf5700] ml-1 rounded-[1px] animate-cursor" />
+                <span className="inline-block w-2.5 h-6 bg-burnt ml-1 rounded-[1px] animate-cursor" />
               </>
             </div>
           </Link>

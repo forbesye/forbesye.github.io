@@ -49,6 +49,8 @@ const BlogMap: React.FC = () => {
               title={title}
               link={`/blog/${slug}`}
               setHoverText={setHoverText}
+              color="green"
+              shape="pin"
             />
           );
         })}

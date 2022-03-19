@@ -1,6 +1,8 @@
 import React, { useState, memo } from "react";
 import USMap from "../assets/states-10m.json";
 import AT from "../assets/at_10percent.json";
+import Towns from "../assets/towns.json";
+import MapMarker from "./mapMarker";
 import {
   ComposableMap,
   Geographies,
@@ -61,8 +63,21 @@ const MapChart: React.FC<MapProps> = ({
               }
               return null;
             })}
+            {Towns.towns.map(({ name, coordinates, offset }) => {
+              const [longitude, latitude] = coordinates;
+              return (
+                <MapMarker
+                  longitude={longitude}
+                  latitude={latitude}
+                  title={name}
+                  color="black"
+                  offset={offset}
+                  shape="circle"
+                />
+              );
+            })}
+            {children}
           </>
-          {children}
         </ZoomableGroup>
       </ComposableMap>
       {tooltip}

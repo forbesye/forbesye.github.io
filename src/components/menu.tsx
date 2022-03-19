@@ -15,7 +15,9 @@ const MainMenu: React.FC<MainMenuProps> = ({ mainMenu, isMobileMenu }) => {
           <Link
             to={menuItem.path}
             className={
-              isMobileMenu ? "no-underline block py-2.5 px-4" : "no-underline"
+              isMobileMenu
+                ? "no-underline block py-2.5 px-4 font-medium"
+                : "no-underline font-medium"
             }
           >
             {menuItem.title}

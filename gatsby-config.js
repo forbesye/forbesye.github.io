@@ -14,8 +14,12 @@ module.exports = {
         path: "/blog",
       },
       {
-        title: "Appalachian Trail",
+        title: "A.T.",
         path: "/appalachian_trail",
+      },
+      {
+        title: "Map",
+        path: "/appalachian_trail_map",
       },
       {
         title: "Resume",

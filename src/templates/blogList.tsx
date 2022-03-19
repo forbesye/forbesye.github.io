@@ -15,35 +15,47 @@ const BlogCard: React.FC<PreviewProps> = ({
 
   return (
     <article className="flex m-5 mb-0 mt-6 first:mt-0 border-b pb-8">
-      <Link className="no-underline" to={`/blog/${slug}`}>
-        <div className="md:flex md:flex-row md:justify-between mb-4 md:mb-6 ">
-          <h2 className="text-4xl font-extrabold md:text-left md:basis-3/4">
-            {title}
-          </h2>
-          <p className="mt-2 italic md:basis-1/4 md:text-right text-[#cbcfd6]">
+      <div>
+        <div className="md:flex md:flex-row md:justify-between mb-4 md:mb-6 md:items-center">
+          <Link className="no-underline hover:text-burnt" to={`/blog/${slug}`}>
+            <h2 className="text-5xl font-extrabold md:text-left md:basis-3/4">
+              {title}
+            </h2>
+          </Link>
+          <p className="text-xl mt-2 italic md:basis-1/4 md:text-right text-[#cbcfd6]">
             {date}
           </p>
         </div>
         <div className="md:flex md:flex-row">
           <div className="md:basis-1/2">
-            {coverImage ? (
-              <GatsbyImage className="aspect-[4/3]" image={image} alt={title} />
-            ) : (
-              <StaticImage
-                className="aspect-[4/3] bg-slate-200 rounded-2xl"
-                src="../assets/placeholder.png"
-                alt="placeholder"
-              />
-            )}
+            <Link className="no-underline" to={`/blog/${slug}`}>
+              {coverImage ? (
+                <GatsbyImage
+                  className="aspect-[4/3]"
+                  image={image}
+                  alt={title}
+                />
+              ) : (
+                <StaticImage
+                  className="aspect-[4/3] bg-slate-200 rounded-2xl"
+                  src="../assets/placeholder.png"
+                  alt="placeholder"
+                />
+              )}
+            </Link>
           </div>
-          <div className="mt-4 md:mt-0 md:basis-1/2 md:flex md:flex-col md:pl-8 md:justify-between">
-            <p className="md:grow md:text-left text-[#cbcfd6]">{excerpt}</p>
-            <div className="mt-4 bg-white hover:bg-slate-300 inline-block mx-auto text-slate-900 px-3 py-1 rounded-lg">
-              Read more →
-            </div>
+          <div className="mt-4 md:mt-0 md:basis-1/2 md:flex md:flex-col md:pl-8 md:justify-start md:items-start">
+            <p className="text-xl leading-8 md:shrink md:text-left text-[#cbcfd6]">
+              {excerpt}
+            </p>
+            <Link className="no-underline" to={`/blog/${slug}`}>
+              <div className="text-xl mt-4 bg-white transition duration-100 hover:bg-burnt hover:text-white inline-block text-slate-900 px-3 py-1 rounded-lg">
+                Read more →
+              </div>
+            </Link>
           </div>
         </div>
-      </Link>
+      </div>
     </article>
   );
 };
@@ -122,7 +134,7 @@ export const query = graphql`
               }
             }
           }
-          excerpt(pruneLength: 300)
+          excerpt(pruneLength: 280)
         }
       }
     }

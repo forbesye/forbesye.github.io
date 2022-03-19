@@ -74,7 +74,15 @@ type MapProps = {
 type MapMarkerProps = {
   longitude: number;
   latitude: number;
-  link: string;
+  link?: string;
+  offsetText?: boolean;
+  offset?: number[];
+  setHoverText?: (text: string) => void;
   title: string;
-  setHoverText: (text: string) => void;
+  color: "green" | "black";
+  shape: "pin" | "circle";
+};
+
+type CodeBlockProps = {
+  children: React.ReactNode;
 };
