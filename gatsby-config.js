@@ -15,11 +15,7 @@ module.exports = {
       },
       {
         title: "A.T.",
-        path: "/appalachian_trail",
-      },
-      {
-        title: "Map",
-        path: "/appalachian_trail_map",
+        path: "/appalachian-trail",
       },
       {
         title: "Resume",
@@ -27,7 +23,7 @@ module.exports = {
       },
       {
         title: "Impossible List",
-        path: "/impossible_list",
+        path: "/impossible-list",
       },
     ],
   },
