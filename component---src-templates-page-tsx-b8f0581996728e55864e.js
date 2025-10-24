@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkpersonal_site=self.webpackChunkpersonal_site||[]).push([[265],{6597:function(e,t,a){a.r(t);var l=a(6540),n=a(2722),s=a(4407);t.default=e=>{let{pageContext:t}=e;const{body:a,frontmatter:{date:d,title:r},fields:{lastUpdated:p}}=t.data;return l.createElement(n.A,{pageTitle:r},l.createElement(s.A,{title:r,date:d,body:a,updatedDate:p}))}}}]);
+//# sourceMappingURL=component---src-templates-page-tsx-b8f0581996728e55864e.js.map
